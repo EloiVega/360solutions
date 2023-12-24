@@ -11,7 +11,8 @@ const Plans = () => {
             "Account manager ",
             "CRM Setup",
             "Weekly/ Bi-weekly management meetings on demand",
-        ]
+        ],
+        popular: false,
     }
 
     const goldPlan = {
@@ -24,7 +25,8 @@ const Plans = () => {
             "Account manager ",
             "CRM Setup",
             "Weekly/ Bi-weekly management meetings on demand",
-        ]
+        ],
+        popular: true,
     }
 
     const platinumPlan = {
@@ -38,7 +40,8 @@ const Plans = () => {
             "CRM Setup ",
             "Weekly/ Bi-weekly management meetings on demand",
             "4th build your own / customize your own package",
-        ]
+        ],
+        popular: false,
     }
 
   return (
