@@ -1,8 +1,8 @@
 import aboutImage from '../ui/images/aboutus.jpg'
 
-const About = () => {
+const About = ({id}) => {
   return (
-    <div id="#about" className='w-full xl:h-80vh flex justify-center'>
+    <div id={id}className='w-full xl:h-80vh flex justify-center'>
         <div className="w-10/12 mb-10 flex border-black border-solid justify-evenly items-center">
           <div className="w-5/12 h-3/4 hidden xl:flex justify-center items-center border border-orange-300/30 border-4 shadow-xl">
             <img src={aboutImage} alt="" className="w-full h-full" />

@@ -1,5 +1,5 @@
 import React from 'react'
-import landingStyles from './Landing.module.css'
+import landingStyles from '../css/Landing.module.css'
 import heroImage from '../ui/images/heroBanner.jpg'
 
 const Home = () => {
@@ -17,10 +17,10 @@ const Home = () => {
             </div>
 
             <div className=' ml-5 xs:ml-10 flex justify-center w-9/12 xs:w-2/3 md:w-96 h-12 text-orange-200 font-medium rounded-full tracking-wider'>
-            <div className='w-1/2 h-12 border border-solid border-orange-100 flex justify-center items-center text-sm xs:text-lg xl:text-xl rounded-l-full hover:bg-gray-200 hover:text-orange-800/80 transition'>
+            <div className='w-1/2 h-12 border border-solid border-orange-100 flex justify-center items-center text-sm xs:text-lg xl:text-xl rounded-l-full hover:bg-gray-200 hover:text-orange-800/80 transition duration-300'>
                 What We Do?
             </div>
-            <div className='w-1/2 h-12 bg-orange-500/90 border border-solid border-orange-100 flex justify-center items-center text-white text-sm xs:text-lg xl:text-xl rounded-r-full hover:bg-gray-200 hover:text-orange-800/80 transition'>
+            <div className='w-1/2 h-12 bg-orange-500/90 border border-solid border-orange-100 flex justify-center items-center text-white text-sm xs:text-lg xl:text-xl rounded-r-full hover:bg-gray-200 hover:text-orange-800/80 transition duration-300'>
                 Get A Quote!
             </div>
             </div>

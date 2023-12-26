@@ -2,9 +2,9 @@ import React from 'react'
 import Service from './Service'
 import { faPhone, faHandshake, faHeadset } from '@fortawesome/free-solid-svg-icons'
 
-const Services = () => {
+const Services = ({id}) => {
   return (
-    <div className='w-full  lg:h-60vh py-10 lg:py-0 bg-orange-200/30 flex flex-col justify-evenly items-center'>
+    <div id = {id} className='w-full  lg:h-60vh py-10 lg:py-0 bg-orange-200/30 flex flex-col justify-evenly items-center'>
         <h1 className='text-6xl font-semibold text-gray-700 mb-6 xl:mb-0'>Our Services</h1>
         <div className="w-full md:w-11/12 flex md:grid grid-cols-2 lg:flex flex-col lg:flex-row justify-center items-center gap-6">
             <Service 

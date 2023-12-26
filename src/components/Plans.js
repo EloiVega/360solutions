@@ -1,6 +1,6 @@
-import Plan from "./Plan"
+import Plan from "./plan"
 
-const Plans = () => {
+const Plans = ({id}) => {
 
     const silverPlan = {
         name : "Silver",
@@ -45,9 +45,9 @@ const Plans = () => {
     }
 
   return (
-        <div className='w-full lg:h-100vh pb-10 bg-orange-200/30 flex flex-col justify-evenly items-center'>
-        <h1 className='tracking-wider min-h-24 flex justify-center items-center text-6xl font-semibold text-gray-700 mb-6 xl:mb-0'>Pricing <span className="text-orange-500/90 ml-5">Plans</span></h1>
-        <div className="w-full md:px-5 flex md:grid grid-cols-2 lg:flex flex-col lg:flex-row justify-center items-center gap-6">
+    <div id = {id} className='w-full xl:h-100vh pb-10 bg-orange-200/30 flex flex-col justify-evenly items-center'>
+        <h1 className='tracking-wider min-h-24 flex justify-center items-center text-4xl sm:text-6xl font-semibold text-gray-700 mb-6 xl:mb-0'>Pricing <span className="text-orange-500/90 ml-5">Plans</span></h1>
+        <div className="w-full md:px-5 flex md:grid grid-cols-2 xl:flex flex-col xl:flex-row justify-center items-center gap-6">
             <Plan 
                 plan = { silverPlan } 
             />

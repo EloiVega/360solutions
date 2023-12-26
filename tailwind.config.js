@@ -24,7 +24,11 @@ module.exports = {
         '90vh': '90vh',
         '100vh': '100vh',
         '110vh': '101vh',
-      }
+      },
+      transitionProperty: {
+        'width': 'width',
+        'height': 'height'
+    }
     },
   },
   plugins: [],
