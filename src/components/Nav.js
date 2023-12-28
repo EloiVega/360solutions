@@ -8,7 +8,7 @@ const Nav = () => {
 
   const [onMobile, setOnMobile] = useState(window.innerWidth <= 768);
   const [showNavList, setShowNavList] = useState(false);
-  const mobileStyles = "py-2 hover:translate-y-0.5 transition duration-300 text-orange-600 border-b border-gray-300 rounded-lg hover:shadow-md";
+  const mobileStyles = "py-2 hover:translate-y-0.5 text-orange-600 border-b border-gray-300 rounded-lg hover:shadow-md";
 
   const closeModal = () => {
     setShowNavList((prev) => !prev);

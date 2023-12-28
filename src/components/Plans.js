@@ -1,3 +1,4 @@
+import CustomPlan from "./CustomPlan"
 import Plan from "./plan"
 
 const Plans = ({id}) => {
@@ -39,7 +40,7 @@ const Plans = ({id}) => {
             "Account manager ",
             "CRM Setup ",
             "Weekly/ Bi-weekly management meetings on demand",
-            "4th build your own / customize your own package",
+            "Build your own / Customize your own package",
         ],
         popular: false,
     }
@@ -58,6 +59,7 @@ const Plans = ({id}) => {
                 plan = { platinumPlan }
             />
         </div>
+        <CustomPlan />
     </div>
     
   )

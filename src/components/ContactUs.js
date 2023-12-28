@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { faUser, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import emailjs from 'emailjs-com'
 
 const ContactUs = ({id}) => {
 
@@ -19,13 +19,35 @@ const ContactUs = ({id}) => {
   const phoneRef = useRef()
   const messageRef = useRef()
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [name, setName] = useState('qwe');
+  const [email, setEmail] = useState('qwe@qwe');
+  const [phone, setPhone] = useState('12312312312');
   const [message, setMessage] = useState('');
 
+  console.log(process.env.SERVICE_ID);
+  
+  function sendEmail(e) {
+    e.preventDefault();
+    console.log(e.target);
+    const templateParams = {
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
+    }
+
+    emailjs.send("service_Id", 'template_Id', templateParams, 'api_key')
+    .then((result) => {
+      window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+    }, (error) => {
+      console.log(error.text);
+    });
+  }
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    sendEmail(e);
 
     setIsPhoneValid(phone.length === 11);
     setIsNameValid(name.length > 0);
@@ -51,6 +73,7 @@ const ContactUs = ({id}) => {
   return (
     <div id = {id} className='w-full min-h-80vh sm:px-10 py-10 flex flex-col items-center gap-10'>
       <h1 className='text-4xl sm:text-6xl font-semibold tracking-wider'>Get In Touch</h1>
+      
       <div className=" w-11/12 sm:w-10/12 lg:w-1/2 h-5/6 p-2 bg-orange-100/70 rounded-2xl shadow-xl">
         <form  onSubmit={handleSubmit} className="w-full h-full px-4 sm:px-10 py-14 bg-white">
           {/* Name Handling */}
@@ -60,6 +83,7 @@ const ContactUs = ({id}) => {
               <FontAwesomeIcon icon = {faUser} className='text-gray-400' />
             </span>
             <input 
+              id = "name"
               ref = {nameRef}
               value = {name}
               onChange = {(e) => setName(e.target.value)}

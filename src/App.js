@@ -10,7 +10,7 @@ import Socials from './components/Socials';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App select-none">
       <Nav/>
       <Home id = "home"/>
       <About id = "about"/>
